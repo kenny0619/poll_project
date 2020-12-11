@@ -22,25 +22,26 @@
                         <hr />
 
                         <form method="POST">
+                            {% csrf_token %}
                             <div class="form-group">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="poll" value="option1" required>
-                                        Python
+                                        <input type="radio" name="poll" value="option1">
+                                        {{ poll.option_one }}
                                     </label> &nbsp;
                                     <label>
                                         <input type="radio" name="poll" value="option2">
-                                        JavaScript
+                                        {{ poll.option_two }}
                                     </label> &nbsp;
                                     <label>
                                         <input type="radio" name="poll" value="option3">
-                                        Swift
+                                        {{ poll.option_three }}
                                     </label> &nbsp;
                                 </div>
                             </div>
-
+            
                             <hr />
-
+            
                             <button type="submit" class="btn btn-info">
                                 Submit
                             </button>
